@@ -23,6 +23,11 @@ h1{
 .options img:active{
     filter: brightness(110%);
 }
+.victory{
+    font-size: 1.9rem;
+    text-align: center;
+    font-weight: bold;
+}
 .chosen,.score {
     display: flex;
     flex-direction: column;

@@ -26,19 +26,66 @@ function compPlay(){
     }
     return c;
 }
+
 rock.addEventListener("click", function(){
     let compChoice = compPlay();
     pChoice.textContent = "Player: Rock";
     if (compChoice==0)
     {
-        
+        msg.textContent = "It's a tie!";
     }
     else if (compChoice==1)
     {
-
+        msg.textContent = "You lose!";
+        compScore++;
     }
     else
     {
-
+        msg.textContent = "You win!";
+        playerScore++;
     }
+    pScore.textContent = `Player: ${playerScore}`;
+    cScore.textContent = `Computer: ${compScore}`;
+})
+
+paper.addEventListener("click", function(){
+    let compChoice = compPlay();
+    pChoice.textContent = "Player: Paper";
+    if (compChoice==0)
+    {
+        msg.textContent = "You win!";
+        playerScore++;
+    }
+    else if (compChoice==1)
+    {        
+        msg.textContent = "It's a tie!";
+    }
+    else
+    {
+        msg.textContent = "You lose!";
+        compScore++;        
+    }
+    pScore.textContent = `Player: ${playerScore}`;
+    cScore.textContent = `Computer: ${compScore}`;
+})
+
+scissor.addEventListener("click", function(){
+    let compChoice = compPlay();
+    pChoice.textContent = "Player: Scissor";
+    if (compChoice==0)
+    {
+        msg.textContent = "You lose!";
+        compScore++;
+    }
+    else if (compChoice==1)
+    {
+        msg.textContent = "You win!";
+        playerScore++;
+    }
+    else
+    {        
+        msg.textContent = "It's a tie!";
+    }
+    pScore.textContent = `Player: ${playerScore}`;
+    cScore.textContent = `Computer: ${compScore}`;
 })
